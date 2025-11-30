@@ -45,7 +45,7 @@ class TinyRecursiveModel(nn.Module):
         self.head = nn.Linear(dim, vocab_size)
 
     def forward(self, x):
-        B, L = x.shape
+        B, L = x.shape   
         # Initial Embedding (x -> z_0)
         z = self.embedding(x) + self.pos_embedding[:, :L, :]
         
