@@ -9,7 +9,7 @@ BATCH_SIZE = 32
 DIM = 256  # Small dimension for "Tiny" constraint
 RECURSION_DEPTH = 6  # T=6 recursions
 LR = 3e-4
-EPOCHS = 3
+EPOCHS = 7
 
 def train():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -17,7 +17,7 @@ def train():
 
     # 1. Dataset
     print("Loading dataset...")
-    ds = ChessMoveDataset("data/games.csv", seq_len=128)
+    ds = ChessMoveDataset("data/train.csv", seq_len=128)
     loader = DataLoader(ds, batch_size=BATCH_SIZE, shuffle=True)
     print(f"Vocab size: {ds.vocab_size}")
 
