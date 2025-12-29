@@ -271,5 +271,19 @@ MIT License
 
 ---
 
+## 💡 Quick Start with Pre-trained Model
+
+You can also use the provided `trm_chess_model.pth` directly without training!
+
+1. Ensure you have the dependencies installed.
+2. Run the inference script:
+
+```bash
+cd src
+python inference.py
+```
+
+The script will automatically load `trm_chess_model.pth` from the root directory if it exists.
+
 
 
